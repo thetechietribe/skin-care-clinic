@@ -15,17 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#1A2027",
   }),
 }));
-
-interface ReferralCardProps {
-  img: string,
-  title: string,
-  subTitle?: string,
-  content: React.ReactNode,
-  brdRadius?: string,
-  pt?:string
-}
-
-const ReferralCard: React.FC<ReferralCardProps> = ({ img, title, subTitle, content, brdRadius = "0px 100px 0px 0px", pt="110px" }) => {
+const ReferralCard: React.FC = () => {
   return (
     <Box
       sx={{
@@ -34,7 +24,7 @@ const ReferralCard: React.FC<ReferralCardProps> = ({ img, title, subTitle, conte
         justifyContent: "space-between",
         width: "87%",
         m: "auto",
-        pt: pt,
+        pt: "110px",
         position: "relative",
       }}
     >
@@ -57,7 +47,7 @@ const ReferralCard: React.FC<ReferralCardProps> = ({ img, title, subTitle, conte
           <CardMedia
             component="img"
             image={
-              img
+              "https://images.squarespace-cdn.com/content/v1/5eda3fbf8d12f643631d3deb/451d3d6d-b456-4e4a-a4e0-067702611cd6/20%25+off.png?format=2500w"
             }
             alt="img"
             loading="lazy"
@@ -73,7 +63,7 @@ const ReferralCard: React.FC<ReferralCardProps> = ({ img, title, subTitle, conte
               left: 0,
               width: { xs: "100%" },
               height: { xs: "100%" },
-              borderRadius: brdRadius
+              borderRadius: "0px 100px 0px 0px",
             }}
           ></Box>
         </Item>
@@ -109,12 +99,69 @@ const ReferralCard: React.FC<ReferralCardProps> = ({ img, title, subTitle, conte
               top: { xs: "33%", md: "36%" },
             }}
           >
-            {title}{" "}
+            Spread the word{" "}
             <span style={{ fontWeight: "bold" }}>
-              {subTitle}
+              Refer your family & friends
             </span>
           </Typography>
-          {content}
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{
+              textAlign: "start",
+              color: "rgb(63,63,63)",
+              fontWeight: 300,
+              fontSize: { xs: 12, md: 16 },
+              letterSpacing: 1,
+              lineHeight: "27.2px",
+              textTransform: "none",
+              ":hover": { backgroundColor: "white" },
+            }}
+          >
+            We believe that the best way to attract new patients is to encourage
+            referrals from our existing patients. So, if you are happy with the
+            treatment and care you receive at Skin Studio we'd love you to tell
+            your friends and family.
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{
+              textAlign: "start",
+              color: "rgb(63,63,63)",
+              fontWeight: 300,
+              fontSize: { xs: 12, md: 16 },
+              letterSpacing: 1,
+              lineHeight: "27.2px",
+              textTransform: "none",
+              ":hover": { backgroundColor: "white" },
+            }}
+          >
+            Simply ask them to complete the form below and we'll do the rest. Be
+            sure to tell the person you are referring to mention you when they
+            attend for their initial appointment.
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{
+              textAlign: "start",
+              color: "rgb(63,63,63)",
+              fontWeight: 700,
+              fontSize: { xs: 12, md: 16 },
+              letterSpacing: 1,
+              lineHeight: "27.2px",
+              textTransform: "none",
+              ":hover": { backgroundColor: "white" },
+            }}
+          >
+            As a little thank you for referring your friend, we'll give you {" "}
+            <span style={{ fontWeight: "bolder", fontFamily: "'Abel'" }}>
+              <b>
+                20% off towards your next treatment.
+              </b>
+            </span>
+          </Typography>
         </Item>
       </Stack>
     </Box>
