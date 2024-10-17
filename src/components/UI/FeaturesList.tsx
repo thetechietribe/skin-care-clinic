@@ -39,6 +39,7 @@ const FeaturesList: React.FC<FeaturesProps> = ({ title, features, bold }) => {
     );
 };
 
+
 export default FeaturesList;
 
 
