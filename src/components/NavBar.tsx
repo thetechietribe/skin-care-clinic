@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import PrimaryButton from "./UI/PrimaryButton";
 import { Typography } from "@mui/material";
 import "../main.css";
@@ -36,6 +36,8 @@ const pagesRoutes = [
 
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = React.useState<boolean>(false);
+  const navigate = useNavigate();
+
 
   const logoUrl =
     "https://images.squarespace-cdn.com/content/v1/5eda3fbf8d12f643631d3deb/1591382258650-OHQ19RZ49U1MJSLXKFJL/logo_Photoshop_PNG.jpg?format=1500wå";
@@ -46,6 +48,7 @@ const NavBar: React.FC = () => {
       alt="logo"
       width={isMobile ? 85 : 135}
       height={isMobile ? 55 : 90}
+      onClick={() => navigate('/')}
     />
   );
 
