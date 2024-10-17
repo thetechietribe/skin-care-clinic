@@ -1,8 +1,25 @@
 import React from 'react'
+import Header from "../components/RfMicroNeedling/Header";
+import SubHeader from "../components/RfMicroNeedling/SubHeader";
+import CareCycle from "../components/RfMicroNeedling/CareCycle";
+import Features from "../components/RfMicroNeedling/Features";
+import FAQs from "../components/RfMicroNeedling/FAQs";
+import ImgBanner from "../components/RfMicroNeedling/ImgBanner";
+import PrimaryBookCard from "../components/UI/PrimaryBookCard";
+import Footer from "../components/RfMicroNeedling/Footer";
 
 const RfMicroNeedling: React.FC = () => {
     return (
-        <div style={{ marginTop: "200px" }} >RfMicroNeedling</div>
+        <>
+            <Header />
+            <SubHeader />
+            <CareCycle />
+            <Features />
+            <FAQs />
+            <ImgBanner />
+            <PrimaryBookCard />
+            <Footer />
+        </>
     )
 }
 
