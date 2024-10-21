@@ -47,4 +47,37 @@ People feel that ‘thinner’ skin will mean skin that is more fragile and wors
   },
 ];
 
-export { faqs, faqsResurfacing };
+const faqNeedling = [
+  {
+    question: "Can you wear makeup after Nano needling?",
+    answer:
+      "Yes, you can wear makeup after nano needling! To be extra gentle on your skin, we recommend using a mineral-based foundation or concealer.",
+  },
+  {
+    question: "How often can you do Nano needling?",
+    answer:
+      "Nano-Needling can be done every two to three weeks. For best results, we recommend a series of treatments.",
+  },
+  {
+    question:
+      "What is the difference between at-home needle-rollers/derma-rollers and a professional treatment?",
+    answer:
+      "Professional treatments typically use more advanced techniques and tools that provide deeper and more effective results compared to at-home options.",
+  },
+  {
+    question: "What are the benefits of Nanoneedling?",
+    answer: [
+      "Enhances product absorption.",
+      "Gently exfoliates.",
+      "Increases hydration.",
+      "Triggers the natural regenerative processes of the skin.",
+      "Increases circulation.",
+      "Softens lines and wrinkles.",
+      "Evens skin tone.",
+      "Improves skin texture.",
+    ],
+  },
+];
+
+
+export { faqs, faqsResurfacing, faqNeedling };
