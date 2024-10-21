@@ -8,7 +8,7 @@ interface buttonProps {
   btnwidth?: string
 }
 
-const PrimaryButton: React.FC<buttonProps> = ({ content, fontsize = 9, btnpadding = "8px 14px", btnwidth }) => {
+const PrimaryButton: React.FC<buttonProps> = ({ content, fontsize = 13, btnpadding = "10px 14px", btnwidth }) => {
   return (
     <Button
       sx={{
@@ -17,17 +17,18 @@ const PrimaryButton: React.FC<buttonProps> = ({ content, fontsize = 9, btnpaddin
         fontWeight: "bolder",
         wordSpacing: 1,
         letterSpacing: 2,
-        fontSize: { fontsize },
+        fontSize: fontsize,
         textTransform: "none",
         backgroundColor: "rgb(165, 163, 158)",
         color: "white",
         lineHeight: "normal",
         borderRadius: "0.4rem",
         ":hover": { backgroundColor: "rgb(160, 150, 140)" },
-        width: btnwidth
+        width: btnwidth,
+        fontFamily: "sans-serif"
       }}
     >
-      <b style={{ fontWeight: 900, fontSize: "15px" }}>{content}</b>
+      {content}
     </Button>
   );
 };
