@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import FAQsCard from "../UI/FAQsCard";
-import { faqs } from "../../data/FAQsData";
+import { faqsResurfacing } from "../../data/FAQsData";
 
 const FAQs: React.FC = () => {
     return (
@@ -27,12 +27,12 @@ const FAQs: React.FC = () => {
                     },
                     fontFamily: "'Abel'",
                     fontWeight: 400,
-                    mb: { xs: "0px", md: "100px" },
+                    my: { xs: "0px", md: "100px" },
                 }}>
                     FAQs
                 </Typography>
                 <Box>
-                    {faqs.map((faq) => (
+                    {faqsResurfacing.map((faq) => (
                         <FAQsCard question={faq.question} answer={faq.answer} />
                     ))}
                 </Box>

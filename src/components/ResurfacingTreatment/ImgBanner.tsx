@@ -1,16 +1,14 @@
 import React from 'react'
-import { microneedlingData } from "../../data/ImagesData";
+import { resurfacingData } from "../../data/ImagesData";
 import PrimaryImgBanner from "../UI/PrimaryImgBanner";
 import { Box } from '@mui/material';
 
-const ImgBanner: React.FC = () => {
-  return (
+const ImgBanner: React.FC = () => (
     <Box sx={{ py: { sm: "0px", md: "110px" }, width: "87%", m: "auto", display: "flex", flexWrap: "wrap", justifyContent: { xs: "center", md: "space-between" } }}>
-      {microneedlingData.map((itm) => (
-        <PrimaryImgBanner img={itm.img} content={itm.content} />
-      ))}
+        {resurfacingData.map((itm) => (
+            <PrimaryImgBanner img={itm.img} content={itm.content} />
+        ))}
     </Box>
-  )
-}
+)
 
 export default ImgBanner

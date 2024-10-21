@@ -38,7 +38,7 @@ const PrimaryBookCard: React.FC = () => {
                     backgroundColor: "rgb(223, 224, 225)",
                     position: "absolute",
                     p: { xs: "20px", sm: "40px 40px", md: "72px" },
-                    top: { xs: "80%", sm: "80%", md: "33%" },
+                    top: { xs: "30%", sm: "80%", md: "33%" },
                     left: { xs: "7%", sm: "15%", md: "50%" },
                     display: "flex",
                     flexDirection: "column",
@@ -70,6 +70,23 @@ const PrimaryBookCard: React.FC = () => {
                     Book Now!
                 </Typography>
                 <PrimaryButton content='Book Appointment' />
+            </Box>
+            <Box sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: "20px",
+                alignItems: "center",
+                mt: { xs: "210px", md: "0px" }
+            }}>
+                <Typography variant="h1" sx={{
+                    fontFamily: "'Abel'",
+                    fontWeight: 400,
+                    fontSize: { xs: "25px", md: "48px" }
+                }}>
+                    Check out other treatments
+                </Typography>
+                <PrimaryButton content='Back to treatments' />
             </Box>
         </Box>
     )

@@ -6,8 +6,6 @@ import Features from "../components/RfMicroNeedling/Features";
 import FAQs from "../components/RfMicroNeedling/FAQs";
 import ImgBanner from "../components/RfMicroNeedling/ImgBanner";
 import PrimaryBookCard from "../components/UI/PrimaryBookCard";
-import Footer from "../components/RfMicroNeedling/Footer";
-
 const RfMicroNeedling: React.FC = () => {
     return (
         <>
@@ -18,7 +16,6 @@ const RfMicroNeedling: React.FC = () => {
             <FAQs />
             <ImgBanner />
             <PrimaryBookCard />
-            <Footer />
         </>
     )
 }
