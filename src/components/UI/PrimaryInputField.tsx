@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import { Box } from "@mui/material";
 
+interface formDataInrFace {
+    firstName: string,
+    lastName: string,
+    email: string,
+    phone: string,
+    description: string,
+    refFirstName: string,
+    refLastName: string
+}
 interface inputFieldProps {
     labelContent: string;
+    value: string,
+    feild: string,
+    setValue: React.Dispatch<React.SetStateAction<formDataInrFace>>
 }
 
-const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent }) => {
+const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent, value, feild, setValue }) => {
     const [focus, setIsFocused] = useState<boolean>(false);
 
     return (
@@ -31,6 +43,12 @@ const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent }) => {
             <input
                 type="text"
                 id="name"
+                value={value}
+                onChange={(e) => (
+                    setValue((prevVal) => {
+                        return { ...prevVal, [feild]: e.target.value }
+                    })
+                )}
                 style={{
                     padding: "12px",
                     width: "100%",
