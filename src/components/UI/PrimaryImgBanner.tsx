@@ -3,10 +3,13 @@ import { CardMedia, Card, Typography } from '@mui/material';
 
 interface PrimaryImgBannerProps {
     img: string,
-    content?: string
+    content?: string,
+    width?: string,
+    height?: string,
+    mt?:string
 }
 
-const PrimaryImgBanner: React.FC<PrimaryImgBannerProps> = ({ img, content }) => {
+const PrimaryImgBanner: React.FC<PrimaryImgBannerProps> = ({ img, content, width = "720px", height = "540px", mt= "20px" }) => {
     return (
         <CardMedia component="div">
             <>
@@ -16,9 +19,9 @@ const PrimaryImgBanner: React.FC<PrimaryImgBannerProps> = ({ img, content }) => 
                     src={img}
                     alt={img}
                     sx={{
-                        height: { xs: "340px", md: "540px" },
-                        mt: "20px", boxShadow: "none", borderRadius: "0px",
-                        width: { xs: "300px", sm: "420px", md: "720px" }
+                        height: { xs: "340px", md: height },
+                        mt: mt, boxShadow: "none", borderRadius: "0px",
+                        width: { xs: "300px", sm: "420px", md: width }
                     }}
                     loading="lazy">
                 </Card>
