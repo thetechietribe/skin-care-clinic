@@ -3,10 +3,10 @@ import { Stack, Typography, Box } from "@mui/material";
 
 const Review: React.FC = () => {
   return (
-    <Box sx={{ py: { xs: "28px", md: "125px" } }}>
+    <Box sx={{ py: { xs: "28px", md: "50px", lg: "125px" } }}>
       <Stack
         margin="auto"
-        width={{ xs: "90%", sm: "80%", md: "1100px" }}
+        width={{ xs: "90%", sm: "80%", md: "70%" }}
         alignItems="center"
         spacing={3}
       >
@@ -20,10 +20,10 @@ const Review: React.FC = () => {
         <Typography
           sx={{
             fontFamily: '"Abel", sans-serif',
-            fontSize: { xs: "24px", md: "48px" },
+            fontSize: { xs: "24px", md: "38px", lg: "48px" },
             fontWeight: 400,
             textAlign: "center",
-            padding: { xs: "10px", md: "17px" },
+            padding: { xs: "10px", md: "10px", lg: "17px" },
           }}
         >
           Skin Studio UK provides expert, high-grade and polished treatments to

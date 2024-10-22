@@ -34,8 +34,8 @@ const ReferralCard: React.FC = () => {
       >
         <Item
           sx={{
-            width: { xs: "282px", md: "801px" },
-            height: { xs: "240px", md: "535px" },
+            width: { xs: "282px", sm: "482px", md: "701px", lg: "801px" },
+            height: { xs: "240px", sm: "440px", md: "435px", lg: "535px" },
             boxShadow: "none",
             display: "flex",
             position: "relative",
@@ -86,7 +86,7 @@ const ReferralCard: React.FC = () => {
               textAlign: "start",
               color: "rgb(63,63,63)",
               fontWeight: 100,
-              fontSize: { xs: "30px", md: "48px" },
+              fontSize: { xs: "30px", md: "38px", lg: "48px" },
               letterSpacing: 1,
               lineHeight: "27.2px",
               fontFamily: '"Abel", sans-serif',
@@ -95,8 +95,8 @@ const ReferralCard: React.FC = () => {
               zIndex: 5,
               p: 2,
               position: "absolute",
-              left: { xs: "5px", md: "36%" },
-              top: { xs: "33%", md: "36%" },
+              left: { xs: "5px", sm: "10%", md: "20%", lg: "36%" },
+              top: { xs: "33%", sm: "50%", md: "20%", lg: "36%" },
             }}
           >
             Spread the word{" "}
