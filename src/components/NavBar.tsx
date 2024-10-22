@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
         backgroundColor: "white",
         boxShadow: "none",
         py: "16.8px",
-        px: { xs: 5, md: 11 },
+        px: { xs: 1, md: 1, lg: 11 },
         zIndex: 100,
       }}
     >
@@ -68,15 +68,15 @@ const NavBar: React.FC = () => {
           disableGutters
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: { xs: "none", lg: "flex" } }}>
             {renderLogo(false)}
           </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex", lg: "none" } }}>
             {renderLogo(true)}
           </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
+          <Box sx={{ display: { xs: "flex", lg: "none" }, ml: "auto" }}>
             {drawerOpen ? (
               <IconButton
                 size="large"
@@ -98,7 +98,9 @@ const NavBar: React.FC = () => {
 
           <Box
             sx={{
-              display: { xs: "none", md: "flex", gap: 18 },
+              display: { xs: "none", md: "none", lg: "flex" },
+              gap: { md: 1, lg: 2 },
+              fontSize: { xs: 8, md: 14, lg: 15 },
               alignItems: "center",
             }}
           >
@@ -113,7 +115,6 @@ const NavBar: React.FC = () => {
                   width: "fit-content",
                   paddingBottom: "4px",
                   color: "rgb(63,63,63)",
-                  fontSize: 15,
                   fontWeight: 100,
                   textTransform: "none",
                   ":hover": { backgroundColor: "white" },

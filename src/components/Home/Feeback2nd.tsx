@@ -103,8 +103,8 @@ const Feedback2nd: React.FC = () => {
               "https://fullcirclehome.com/cdn/shop/products/fc0376afd4e04c88996ffad255212b2a.thumbnail.0000000000_1024x.jpg?v=1663898364"
             }
             sx={{
-              width: { xs: "282px", md: "656px" },
-              height: { xs: "422px", md: "984px" },
+              width: { xs: "282px", md: "456px", lg: "656px" },
+              height: { xs: "422px", md: "784px", lg: "984px" },
               borderRadius: "45px",
             }}
             alt="img"

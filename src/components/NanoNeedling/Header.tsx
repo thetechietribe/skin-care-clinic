@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         >
             <Stack
                 spacing={2}
-                sx={{ flexDirection: { xs: "column", md: "row", gap: 15 } }}
+                sx={{ flexDirection: { xs: "column", lg: "row", gap: 15 } }}
             >
                 <Item
                     sx={{
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                             textAlign: "start",
                             color: "rgb(63,63,63)",
                             fontWeight: 400,
-                            fontSize: { xs: "30px", md: "48px" },
+                            fontSize: { xs: "30px", md: "38px", lg: "48px" },
                             letterSpacing: 1,
                             lineHeight: "27.2px",
                             fontFamily: '"Abel", sans-serif',

@@ -31,7 +31,7 @@ const ReferralCard: React.FC = () => {
         >
             <Stack
                 spacing={2}
-                sx={{ flexDirection: { xs: "column-reverse", md: "row", gap: 15, pl: "24px" } }}
+                sx={{ flexDirection: { xs: "column-reverse", lg: "row", gap: 15, pl: "24px" } }}
             >
                 <Item
                     sx={{

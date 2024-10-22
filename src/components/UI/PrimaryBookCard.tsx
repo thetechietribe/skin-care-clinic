@@ -37,9 +37,9 @@ const PrimaryBookCard: React.FC = () => {
                 sx={{
                     backgroundColor: "rgb(223, 224, 225)",
                     position: "absolute",
-                    p: { xs: "20px", sm: "40px 40px", md: "72px" },
-                    top: { xs: "30%", sm: "80%", md: "33%" },
-                    left: { xs: "7%", sm: "15%", md: "50%" },
+                    p: { xs: "20px", sm: "40px 80px", md: "80px", lg: "72px" },
+                    top: { xs: "30%", sm: "40%", md: "45%", lg: "33%" },
+                    left: { xs: "7%", sm: "25%", md: "10%", lg: "50%" },
                     display: "flex",
                     flexDirection: "column",
                     margin: "auto",

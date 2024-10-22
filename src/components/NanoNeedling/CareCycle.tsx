@@ -18,7 +18,7 @@ const CareCycle: React.FC = () => {
             }}>
                 Things to consider
             </Typography>
-            <Stack direction={{ xs: "column", md: "row" }} justifyContent="space-between" >
+            <Stack direction={{ xs: "column", lg: "row" }} sx={{ flexWrap: { md: "wrap", lg: "nowrap" } }} justifyContent={{ lg: "space-between", md: "center" }}  >
                 <CareCard img='https://images.squarespace-cdn.com/content/v1/5eda3fbf8d12f643631d3deb/1649264978140-973ENKU0G5ILMXNVX0AT/unsplash-image-dhZtNlvNE8M.jpg?format=1000w' title='Recovery time:' duration='No downtime' />
                 <CareCard img='https://images.squarespace-cdn.com/content/v1/5eda3fbf8d12f643631d3deb/1649264978140-973ENKU0G5ILMXNVX0AT/unsplash-image-dhZtNlvNE8M.jpg?format=1000w' title='Treatment time:' duration='45-60 Minutes' />
                 <CareCard img='https://images.squarespace-cdn.com/content/v1/5eda3fbf8d12f643631d3deb/1649264978140-973ENKU0G5ILMXNVX0AT/unsplash-image-dhZtNlvNE8M.jpg?format=1000w' title="Results duration:" duration='Up to 3 months' />

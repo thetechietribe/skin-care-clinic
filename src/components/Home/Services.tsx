@@ -6,7 +6,7 @@ import ServicesData from "../../data/ServicesData";
 const Services: React.FC = () => {
   return (
     <>
-      <Box sx={{ my: { xs: "10px", md: "110px" } }}>
+      <Box sx={{ my: { xs: "10px", md: "15px", lg: "110px" } }}>
         <Typography
           variant="h3"
           color="initial"
@@ -14,7 +14,7 @@ const Services: React.FC = () => {
             fontFamily: '"Abel", sans-serif',
             textAlign: "center",
             py: "50px",
-            my: "40px",
+            my: { md: "0px", lg: "40px" },
           }}
         >
           Skincare for{" "}
@@ -26,12 +26,14 @@ const Services: React.FC = () => {
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={3}
-          justifyContent={"center"}
+          alignItems="center"
+          justifyContent="center"
+          paddingX={{ xs: "10px", md: "10px", lg: "0px" }}
         >
           <Stack
             direction={"column"}
             spacing={3}
-            paddingX={{ xs: "10px", md: "0" }}
+            paddingX={{ xs: "10px", md: "0px", lg: "0px" }}
           >
             <ServiceCard
               img={ServicesData[0].img}

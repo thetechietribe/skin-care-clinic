@@ -44,8 +44,8 @@ const Feedback: React.FC = () => {
             alt="img"
             loading="lazy"
             sx={{
-              width: { xs: "282px", md: "656px" },
-              height: { xs: "422px", md: "984px" },
+              width: { xs: "282px", md: "456px", lg: "656px" },
+              height: { xs: "422px", md: "784px", lg: "984px" },
             }}
           />
         </Item>
