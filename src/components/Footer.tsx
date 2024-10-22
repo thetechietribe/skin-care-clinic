@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { FacebookOutlined, Instagram } from '@mui/icons-material';
 
 export default function BasicGrid() {
     return (
@@ -81,10 +80,10 @@ export default function BasicGrid() {
                             gap: 1
                         }} >
                             <span>
-                                <InstagramIcon />
+                                <Instagram />
                             </span>
                             <span>
-                                <FacebookOutlinedIcon />
+                                <FacebookOutlined />
                             </span>
                         </Box>
                     </Box>

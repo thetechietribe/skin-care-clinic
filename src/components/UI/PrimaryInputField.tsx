@@ -7,17 +7,18 @@ interface formDataInrFace {
     email: string,
     phone: string,
     description: string,
-    refFirstName: string,
-    refLastName: string
+    refFirstName?: string,
+    refLastName?: string,
 }
 interface inputFieldProps {
     labelContent: string;
     value: string,
-    feild: string,
+    field: string,
     setValue: React.Dispatch<React.SetStateAction<formDataInrFace>>
+    textArea?: boolean,
 }
 
-const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent, value, feild, setValue }) => {
+const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent, value, field, setValue, textArea = false }) => {
     const [focus, setIsFocused] = useState<boolean>(false);
 
     return (
@@ -40,26 +41,52 @@ const PrimaryInputField: React.FC<inputFieldProps> = ({ labelContent, value, fei
             >
                 {labelContent}
             </label>
-            <input
-                type="text"
-                id="name"
-                value={value}
-                onChange={(e) => (
-                    setValue((prevVal) => {
-                        return { ...prevVal, [feild]: e.target.value }
-                    })
-                )}
-                style={{
-                    padding: "12px",
-                    width: "100%",
-                    backgroundColor: "rgba(189, 189, 189, 0.1)",
-                    border: "1px solid rgb(189, 189, 189)",
-                    outline: `${focus ? "2px solid black" : "0px solid rgb(189, 189, 189)"}`,
-                    outlineOffset: `${focus ? "2px" : "0px"}`
-                }}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-            />
+            {textArea ? (
+                <textarea
+                    id="name"
+                    value={value}
+                    onChange={
+                        (e) => (
+                            setValue((prevVal) => {
+                                return { ...prevVal, [field]: e.target.value }
+                            })
+                        )}
+                    style={{
+                        padding: "12px",
+                        width: "100%",
+                        backgroundColor: "rgba(189, 189, 189, 0.1)",
+                        border: "1px solid rgb(189, 189, 189)",
+                        outline: `${focus ? "2px solid black" : "0px solid rgb(189, 189, 189)"}`,
+                        outlineOffset: `${focus ? "2px" : "0px"}`
+                    }}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    rows={5}
+                />
+
+            ) : (
+                <input
+                    type="text"
+                    id="name"
+                    value={value}
+                    onChange={
+                        (e) => (
+                            setValue((prevVal) => {
+                                return { ...prevVal, [field]: e.target.value }
+                            })
+                        )}
+                    style={{
+                        padding: "12px",
+                        width: "100%",
+                        backgroundColor: "rgba(189, 189, 189, 0.1)",
+                        border: "1px solid rgb(189, 189, 189)",
+                        outline: `${focus ? "2px solid black" : "0px solid rgb(189, 189, 189)"}`,
+                        outlineOffset: `${focus ? "2px" : "0px"}`
+                    }}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                />
+            )}
         </Box>
     );
 }

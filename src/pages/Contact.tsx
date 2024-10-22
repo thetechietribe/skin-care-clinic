@@ -1,8 +1,15 @@
 import React from 'react'
+import Header from "../components/Contact/Header";
+import ContactUs from "../components/Contact/ContactUs";
+import ImageBanner from "../components/Contact/ImageBanner";
 
 const Contact: React.FC = () => {
     return (
-        <div style={{ marginTop: "200px" }} >Contact</div>
+        <>
+            <Header />
+            <ContactUs />
+            <ImageBanner />
+        </>
     )
 }
 

@@ -6,8 +6,8 @@ interface formDataInrFace {
   email: string;
   phone: string;
   description: string;
-  refFirstName: string;
-  refLastName: string;
+  refFirstName?: string;
+  refLastName?: string;
   [key: string]: any;
 }
 
