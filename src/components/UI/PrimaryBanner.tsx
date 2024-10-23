@@ -14,7 +14,9 @@ interface primaryBannerProps {
   fontsizeSecondary?: number;
   alignItems?: string
   width?: string,
-  btn?: boolean
+  btn?: boolean,
+  btncontent?: string,
+  gap?: number
 }
 
 const PrimaryBanner: React.FC<primaryBannerProps> = ({
@@ -29,7 +31,9 @@ const PrimaryBanner: React.FC<primaryBannerProps> = ({
   fontsizeSecondary = 35,
   alignItems,
   width = "100%",
-  btn = false
+  btn = false,
+  btncontent = "Get in touch",
+  gap = 5
 }) => {
   return (
     <Box
@@ -71,9 +75,10 @@ const PrimaryBanner: React.FC<primaryBannerProps> = ({
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: { xs: 2, md: 5 },
+            gap: { xs: 1, md: gap },
             width: width,
             alignItems: { xs: "center", md: alignItems },
+            justifyContent: "center"
           }}
         >
           <Typography
@@ -81,7 +86,7 @@ const PrimaryBanner: React.FC<primaryBannerProps> = ({
             component="h2"
             sx={{
               textTransform: textTransform,
-              fontSize: { xs: "45px", md: `${fontsize}px` },
+              fontSize: { xs: "25px", md: `${fontsize}px` },
               fontWeight: fontweight,
               fontFamily: '"Abel", sans-serif',
             }}
@@ -105,7 +110,7 @@ const PrimaryBanner: React.FC<primaryBannerProps> = ({
             {secondaryContent}
           </Typography>
           {btn ? (
-            <PrimaryButton content="Get in touch" btnwidth="fit-content" />
+            <PrimaryButton content={btncontent} btnwidth="fit-content" />
           ) : ""}
         </Box>
       </Box>
